@@ -1,0 +1,104 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+.container{
+	border: 1px solid black;
+
+	margin: 10px;
+	padding: 10px;
+
+	display: grid;
+	grid-template-areas:
+	"heading heading"
+	"seat_count seat_count"
+	"event_image event_form"
+}
+
+.heading{
+/*	background: blue;*/
+	grid-area: heading;
+	text-align: center;
+
+	margin: 20px;
+}
+
+.seat_count{
+/*	background-color: skyblue;*/
+	grid-area: seat_count;
+	display: flex;
+	justify-content: center;
+
+	margin: 20px;
+
+	text-align: center;
+}
+
+.event_image{
+/*	background-color: yellow;*/
+	grid-area: event_image;
+
+	display: grid;
+	place-items: center;
+}
+
+.imageBox{
+/*	background-color: whitesmoke;*/
+	margin: 10px 0;
+	max-width: 250px;
+	max-height: 250px;
+}
+
+.imageBox img{
+	width: 100%;
+}
+
+.event_form{
+	padding: 20px;
+	
+/*	background-color: brown;*/
+	grid-area: event_form;
+
+	font-size: 20px;
+}
+
+form{
+	display: flex;
+	flex-direction: column;
+	row-gap: 20px;
+}
+
+.button input {
+	width: 100px;
+	height: 40px;
+}
+
+@media only screen and (max-width: 900px) {
+	.container{
+	
+		display: flex;
+		flex-direction: column;
+	}
+
+	.event_form {
+		display: grid;
+		place-items: center;
+	}
+
+	form div {
+		display: flex;
+		justify-content: center;
+		column-gap: 10px;
+	}
+
+	.button{
+		width: 100%;
+		
+		display: grid;
+		place-items:center;
+		row-gap: 20px;
+
+
+	}
+}
